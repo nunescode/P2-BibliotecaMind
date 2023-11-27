@@ -1,7 +1,7 @@
 import { Picker } from "@react-native-picker/picker";
 import { Formik } from "formik";
 import React, { useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View } from "react-native";
 import { TextInputMask } from "react-native-masked-text";
 import { Button, Text, TextInput } from "react-native-paper";
 import Toast from "react-native-toast-message";
@@ -85,6 +85,8 @@ export default function FormUsuario({ navigation, route }) {
         }) => (
           <>
             <View style={styles.inputContainer}>
+              
+
               <TextInput
                 style={styles.input}
                 mode="outlined"
@@ -191,7 +193,10 @@ export default function FormUsuario({ navigation, route }) {
                   {errors.data}
                 </Text>
               )}
-              <View><Text></Text></View>
+
+              <View>
+                <Text></Text>
+              </View>
 
               <View>
                 <Text>Possui empréstimo de livro?</Text>
@@ -209,8 +214,8 @@ export default function FormUsuario({ navigation, route }) {
             </View>
 
             <View style={styles.buttonContainer}>
-            <Button
-                style={[styles.button, { backgroundColor: '#808080' }]}
+              <Button
+                style={[styles.button, { backgroundColor: "#808080" }]}
                 mode="contained"
                 onPress={() => navigation.goBack()}
               >
@@ -218,7 +223,7 @@ export default function FormUsuario({ navigation, route }) {
               </Button>
 
               <Button
-                style={[styles.button, { backgroundColor: '#008000' }]}
+                style={[styles.button, { backgroundColor: "#008000" }]}
                 mode="contained"
                 onPress={handleSubmit}
               >

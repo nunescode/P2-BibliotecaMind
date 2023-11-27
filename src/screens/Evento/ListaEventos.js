@@ -20,7 +20,7 @@ export default function ListaEventos({ navigation, route }) {
   useEffect(() => {
     loadEventos();
   }, []);
-
+  
   async function loadEventos() {
     const response = await AsyncStorage.getItem("eventos");
     console.log(
@@ -28,6 +28,7 @@ export default function ListaEventos({ navigation, route }) {
       response
     );
     const eventosStorage = response ? JSON.parse(response) : [];
+    
     setEventos(eventosStorage);
   }
 
